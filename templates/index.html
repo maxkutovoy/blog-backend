@@ -26,7 +26,7 @@
             <div class="flex-fill" style="margin-right: 30px;">
               <div class="card blog__slide text-center">
                 <div class="blog__slide__img">
-                  <img class="card-img rounded-0" src={{ popular_post.image_url }} alt={{ popular_post.title }}>
+                  <img class="card-img rounded-0" src={{ popular_post.image_url }} alt={{ popular_post.slug }}>
                 </div>
                 <div class="blog__slide__content">
                   <h3><a href="{% url 'post_detail' slug=popular_post.slug %}">{{ popular_post.title }}</a></h3>
@@ -49,15 +49,15 @@
               <div class="single-recent-blog-post">
                 <div class="thumb">
                   {% if fresh_post.image_url %}
-                    <img class="img-fluid" src={{ fresh_post.image_url }} alt={{ fresh_post.title }}>
+                    <img class="img-fluid" src={{ fresh_post.image_url }} alt={{ fresh_post.slug }}>
                   {% else %}
-                    <img class="img-fluid" src="static/img/banner/blog.png" alt="default_picture">
+                    <img class="img-fluid" src="/static/img/banner/blog.png" alt="default_picture">
                   {% endif %}
 
                   <ul class="thumb-info" style="max-width: 550px;">
-                    <li><a href="{% url 'post_detail' slug=fresh_post.slug %}"><i> class="ti-user"></i>{{ fresh_post.author }}</a></li>
-                    <li><a href="{% url 'post_detail' slug=fresh_post.slug %}"><i> class="ti-notepad"></i>{{ fresh_post.published_at }}</a></li>
-                    <li><a href="{% url 'post_detail' slug=fresh_post.slug %}"><i> class="ti-themify-favicon"></i>{{ fresh_post.comments_amount }} Comments</a></li>
+                    <li><a href="{% url 'post_detail' slug=fresh_post.slug %}"><i class="ti-user"></i>{{ fresh_post.author }}</a></li>
+                    <li><a href="{% url 'post_detail' slug=fresh_post.slug %}"><i class="ti-notepad"></i>{{ fresh_post.published_at }}</a></li>
+                    <li><a href="{% url 'post_detail' slug=fresh_post.slug %}"><i class="ti-themify-favicon"></i>{{ fresh_post.comments_amount }} Comments</a></li>
                   </ul>
                 </div>
                 <div class="details mt-20">
