@@ -3,5 +3,27 @@
 {% block title %}Sensive Blog - Contact{% endblock %}
 
 {% block content %}
-  {{ html_map|safe }}
+  <!--================ Hero sm Banner start =================-->
+  <section class="mb-30px">
+    <div class="container">
+      <div class="hero-banner hero-banner--sm">
+        <div class="hero-banner__content">
+          <h1>Blog details</h1>
+          <nav aria-label="breadcrumb" class="banner-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Hero sm Banner end =================-->
+  
+    <section class="section-margin--small section-margin">
+    <div class="container">
+      <div class="d-none d-sm-block mb-5 pb-4">
+        {{ html_map|safe }}
+      </div>
 {% endblock %}
